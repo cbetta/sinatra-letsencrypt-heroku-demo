@@ -1,11 +1,43 @@
+GIT
+  remote: git://github.com/cbetta/letsencrypt-rails-heroku.git
+  revision: 00e6a05fde4025536cfe0f9177d9c86ef53d2f5f
+  specs:
+    letsencrypt-rails-heroku (0.2.7)
+      acme-client (~> 0.4.0)
+      platform-api
+
+GIT
+  remote: git://github.com/jalada/platform-api.git
+  revision: 45ddb3c1a7e2c7f85d979c0791db18e99affb237
+  branch: master
+  specs:
+    platform-api (0.8.0)
+      heroics (~> 0.0.17)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    acme-client (0.4.1)
+      faraday (~> 0.9, >= 0.9.1)
+    erubis (2.7.0)
+    excon (0.54.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    heroics (0.0.17)
+      erubis (~> 2.0)
+      excon
+      moneta
+      multi_json (>= 1.9.2)
+      netrc
+    moneta (0.8.0)
+    multi_json (1.12.1)
+    multipart-post (2.0.0)
+    netrc (0.11.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    shotgun (0.9.2)
-      rack (>= 1.0)
+    rack-ssl-enforcer (0.2.9)
+    rake (11.3.0)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -16,7 +48,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  shotgun
+  letsencrypt-rails-heroku!
+  platform-api!
+  rack-ssl-enforcer
+  rake
   sinatra
 
 BUNDLED WITH
